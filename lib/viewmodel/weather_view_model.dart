@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class WeatherViewModel extends ChangeNotifier {
-  final _repo = WeatherRepository();
+  final WeatherRepository _repo;
   Weather? weather;
   bool isLoading = false;
   String city = 'Warsaw';
@@ -14,7 +14,7 @@ class WeatherViewModel extends ChangeNotifier {
   Timer? _refresh;
   String? errorMessage;
 
-  WeatherViewModel() {
+  WeatherViewModel(this._repo) {
     fetchWeather();
     _startAutoRefresh();
   }

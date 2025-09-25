@@ -82,8 +82,7 @@ class WeatherView extends StatelessWidget {
           icon: Icons.water_drop,
           subtitle: 'Opady',
         ),
-        if (weather.weather[0].icon != null)
-          _buildImageCard(context, weather.weather[0].icon), // OpenWeather icon
+        _buildImageCard(context, weather.weather[0].icon),
       ],
     );
   }

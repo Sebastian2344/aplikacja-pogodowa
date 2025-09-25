@@ -9,7 +9,7 @@ class ApiClient {
       receiveTimeout: Duration(seconds: 10),
     ),
   );
-    static final WeatherService weatherService = 
+    static WeatherService weatherService = 
     WeatherService(_dio,
      baseUrl: dotenv.env['BASE_URL']!);
 }

@@ -1,3 +1,4 @@
+import 'package:aplikacja_pogodowa/repository/weather_repository.dart';
 import 'package:aplikacja_pogodowa/view/weather_view.dart';
 import 'package:aplikacja_pogodowa/viewmodel/weather_view_model.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ Future<void> main() async {
   await dotenv.load(fileName: "assets/.env");
   runApp(MultiProvider( 
     providers: [
-      ChangeNotifierProvider(create: (_) => WeatherViewModel()),
+      ChangeNotifierProvider(create: (_) => WeatherViewModel(WeatherRepository())),
     ],
     child: MyApp(),
   ));
