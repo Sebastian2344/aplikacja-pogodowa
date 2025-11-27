@@ -8,3 +8,5 @@ wykorzystane biblioteki:
 retrofit, dio, json_serializable, provider, flutter_dotenv
 
 wzorzec MVVM
+
+v.1
